@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8 Ball Pool Multiplayer</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="game-shell">
+      <header class="hud">
+        <div class="power-column">
+          <div class="power-panel">
+            <div class="power-title">POTÊNCIA</div>
+            <div class="power-stack">
+              <input id="powerSlider" type="range" min="10" max="100" value="52" orient="vertical" />
+              <span id="powerValue">52%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="player-panel active" id="player1-panel">
+          <span class="label">Jogador 1</span>
+          <strong id="player1-name">Jogador 1</strong>
+          <span id="player1-group">Grupo: -</span>
+        </div>
+
+        <div class="center-panel">
+          <div class="status-box">
+            <span id="turn-label">Vez de: Jogador 1</span>
+          </div>
+          <div class="controls">
+            <button id="shootBtn" type="button">Atirar</button>
+            <button id="newGameBtn" type="button" class="secondary">Novo jogo</button>
+          </div>
+        </div>
+
+        <div class="player-panel" id="player2-panel">
+          <span class="label">Jogador 2</span>
+          <strong id="player2-name">Jogador 2</strong>
+          <span id="player2-group">Grupo: -</span>
+        </div>
+      </header>
+
+      <main class="table-wrap">
+        <canvas id="gameCanvas" width="1200" height="700"></canvas>
+      </main>
+
+      <div id="message" class="message-box">Mova o mouse sobre a mesa para mirar e ajuste a potência antes do tiro.</div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
